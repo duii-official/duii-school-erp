@@ -128,7 +128,7 @@ const [alert, setAlert] = useState({ open: false, message: "", severity: "error"
     }
     try {
       // console.log("Submitting Form Data:", student);
-      const res = await axios.post("http://localhost:5000/api/students/add", student);
+      const res = await axios.post("https://duii-school-erp-backend.onrender.com/api/students/add", student);
       // console.log("Response Status:", res.status);
 
       if (res.status === 201) {

@@ -84,7 +84,7 @@ export default function StudentsDetails() {
 
   const fetchStudents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/students");
+      const res = await axios.get("https://duii-school-erp-backend.onrender.com/api/students");
 
       //console.log("✅ API Response:", res.data); // API se aane wala data check karne ke liye
 
@@ -129,7 +129,7 @@ export default function StudentsDetails() {
   const handleUpdate = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/students/${editStudent}`,
+        `https://duii-school-erp-backend.onrender.com/api/students/${editStudent}`,
         formData
       );
       setStudents(students.map((s) => (s._id === editStudent ? res.data : s)));
@@ -145,7 +145,7 @@ export default function StudentsDetails() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this student?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/students/${id}`);
+        await axios.delete(`https://duii-school-erp-backend.onrender.com/api/students/${id}`);
         setStudents(students.filter((student) => student._id !== id));
         setSnackbarMessage("Student deleted successfully!");
         setSnackbarOpen(true);

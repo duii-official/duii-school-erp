@@ -78,7 +78,7 @@ const PaymentPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/payment/students")
+      .get("https://duii-school-erp-backend.onrender.com/api/payment/students")
       .then((response) => setStudents(response.data))
       .catch((error) => console.error("Error fetching students:", error));
   }, []);
@@ -125,7 +125,7 @@ const PaymentPage = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/payment/pay/${selectedStudent}`,
+        `https://duii-school-erp-backend.onrender.com/api/payment/pay/${selectedStudent}`,
         paymentData
       );
       
@@ -181,7 +181,7 @@ const PaymentPage = () => {
 
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/students/${selectedStudent}`
+        `https://duii-school-erp-backend.onrender.com/api/students/${selectedStudent}`
       );
       const student = res.data;
 

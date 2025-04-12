@@ -1,6 +1,6 @@
 import express from 'express';
 import Payment from '../models/Payment.js';  // Yeh sahi hona chahiye
-import Student from '../models/student.js';
+import Student from '../models/Student.js';
 
 
 const router = express.Router();

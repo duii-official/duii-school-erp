@@ -1,5 +1,5 @@
 import express from "express";
-import Student from '../models/student.js';
+import Student from '../models/Student.js';
 const router = express.Router();
 
 // Get Dashboard Stats
